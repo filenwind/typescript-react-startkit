@@ -6,7 +6,7 @@ Including [tslint](https://palantir.github.io/tslint/), [enzyme test](https://gi
 ## Before use
 Change info in package.json
   - name
-    >used for webpack lib name too, you can edit at **`src/config/webpackConfig/commomConfig.ts`** if you want different global variable name
+    >used for webpack lib name too, you can edit at **`src/webpackConfig/commomConfig.ts`** if you want different global variable name
   - repository
   - author
   - license

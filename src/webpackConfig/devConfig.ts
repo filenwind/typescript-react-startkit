@@ -10,7 +10,7 @@ const port = 3000;
 const devConfig = {
   ...webConfig,
   mode: 'development',
-  entry: appRootPath.resolve('./src/client'),
+  entry: appRootPath.resolve('src/client'),
   devServer: {
     port,
     https: true,
