@@ -3,6 +3,7 @@ import appRootPath from 'app-root-path';
 import { TsConfigPathsPlugin } from 'awesome-typescript-loader';
 import readPkg from 'read-pkg';
 import camelCase from 'camelcase';
+import CircularDependencyPlugin from 'circular-dependency-plugin';
 
 const packageJson = readPkg.sync();
 const libraryName = packageJson.name;
@@ -36,6 +37,9 @@ const commonConfig: webpack.Configuration = {
       new TsConfigPathsPlugin({ compiler: 'ttypescript' }),
     ],
   },
+  plugins: [
+    new CircularDependencyPlugin(),
+  ],
 };
 
 export { libraryName };
