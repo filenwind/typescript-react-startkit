@@ -11,8 +11,10 @@
     "tsc": "tsc",
     "test": "mocha -r tsconfig-paths/register -r ts-node/register -r ./src/test/setup.ts ./**/*.spec.{ts,tsx}",
     "lint": "tslint -p ./",
-    "pack": "webpack-cli --config ./src/webpackConfig/index.ts",
-    "build": "npm-run-all lint test clean pack",
+    "pack": "npm-run-all clean pack-flow",
+    "pack:dev": "cross-env NODE_ENV=development npm run pack",
+    "pack-flow": "webpack-cli --config ./src/webpackConfig/index.ts",
+    "build": "npm-run-all lint test pack",
     "dev": "webpack-dev-server --open --config ./src/webpackConfig/devConfig.ts",
     "release": "semantic-release"
   },
