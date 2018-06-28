@@ -26,6 +26,18 @@ const devConfig = {
       inject: false,
       template: htmlWebpackTemplate,
       appMountId: 'root',
+      meta: [
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
+        },
+      ],
+      links: [
+        {
+          href: 'https://csstools.github.io/sanitize.css/latest/sanitize.css',
+          rel: 'stylesheet',
+        },
+      ],
     }),
   ],
 };
