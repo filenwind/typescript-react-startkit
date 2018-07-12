@@ -28,6 +28,9 @@ const commonConfig: webpack.Configuration = {
       {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader',
+        options: {
+          compiler: 'ttypescript',
+        },
       },
     ],
   },

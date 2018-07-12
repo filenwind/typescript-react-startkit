@@ -2,12 +2,14 @@ import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
 import sinon, { spy } from 'sinon';
-import Counter from 'lib/counter';
+import Counter, { CounterProps, CounterState } from 'lib/counter';
 
 describe('<Counter />', () => {
   const onCountChange = sinon.spy();
   const initialCount = 11;
-  const wrapper = mount(<Counter initialCount={initialCount} onCountChange={onCountChange} />);
+  const wrapper = mount<CounterProps, CounterState>(
+    <Counter initialCount={initialCount} onCountChange={onCountChange} />,
+  );
 
   it('should add count', () => {
     wrapper.find('button.add').simulate('click');
