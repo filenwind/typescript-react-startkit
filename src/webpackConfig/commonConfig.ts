@@ -21,7 +21,6 @@ const commonConfig: webpack.Configuration = {
     path: appRootPath.resolve('dist/app'),
     library: camelCase(libraryName, { pascalCase: true }), // lib name, is required for web config
     libraryTarget: 'umd',
-    libraryExport: 'default',
   },
   module: {
     rules: [
